@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  background-color: brown;
+  height: 100px;
+  .header {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h1 {
+      color: white;
+      font-size: 42px;
+    }
+    button {
+      border: 1px solid white;
+      color: white;
+      padding: 10px 20px;
+      font-size: 22px;
+      font-weight: 800;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.041);
+      }
+      &:active {
+        background-color: rgba(255, 255, 255, 0.13);
+      }
+    }
+  }
+}
