@@ -1,0 +1,20 @@
+.container {
+  width: 100%;
+  display: flex;
+
+  .product {
+    flex: 1;
+    h1 {
+      font-size: 52px;
+    }
+    p {
+      font-size: 22px;
+    }
+    span {
+      font-size: 32px;
+    }
+  }
+  .comments {
+    flex: 1;
+  }
+}
