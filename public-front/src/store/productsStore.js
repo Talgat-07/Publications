@@ -4,6 +4,7 @@ import axios from "axios";
 
 export const useProductsStore = create((set) => ({
   products: [],
+  product: {},
   getProducts: async () => {
     try {
       const { data } = await axios.get(`${BASE_URL}/products`);
@@ -50,5 +51,13 @@ export const useProductsStore = create((set) => ({
       });
       return { products: newProducts };
     });
+  },
+  getOneProduct: async (id) => {
+    try {
+      const { data } = await axios.get(`${BASE_URL}/products/${id}`);
+      set({ product: data });
+    } catch (e) {
+      console.log(e);
+    }
   },
 }));
