@@ -33,6 +33,26 @@ class ProductsController {
       console.log(e);
     }
   }
+  async getByProductId(req, res) {
+    try {
+      const { id } = req.params;
+      const comments = await Comments.find({ productId: id });
+      res.json(comments);
+    } catch (e) {
+      console.error(e);
+      res.status(500).json({ message: "Internal Server Error" });
+    }
+  }
+  async deleteByProductId(req, res) {
+    try {
+      const { id } = req.params;
+      const result = await Comments.deleteMany({ productId: id });
+      res.json({ message: "Comments deleted", result });
+    } catch (e) {
+      console.log(e);
+      res.status(500).json(e);
+    }
+  }
 }
 
 export default new ProductsController();

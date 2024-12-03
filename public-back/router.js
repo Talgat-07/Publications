@@ -11,6 +11,8 @@ router.delete("/products/:id", ProductsController.delete);
 
 router.post("/comments", CommentsController.create);
 router.get("/comments", CommentsController.geAll);
-router.delete("/comments/:id", CommentsController.delete);
+router.get("/comments/:id", CommentsController.getByProductId);
+router.delete("/comments/:id", CommentsController.deleteByProductId);
+router.delete("/comment/:id", CommentsController.delete);
 
 export default router;
