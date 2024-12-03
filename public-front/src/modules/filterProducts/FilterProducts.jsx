@@ -5,7 +5,6 @@ import { useProductsStore } from "../../store/productsStore";
 export const FilterProducts = () => {
   const [isFilter, setFilter] = useState("0");
   const { filterProducts, getProducts } = useProductsStore();
-  console.log(isFilter);
 
   useEffect(() => {
     if (isFilter === "0") {

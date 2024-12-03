@@ -7,7 +7,6 @@ export const ProductsList = () => {
   useEffect(() => {
     getProducts();
   }, []);
-  console.log(products);
 
   return (
     <div className={styles.container}>
